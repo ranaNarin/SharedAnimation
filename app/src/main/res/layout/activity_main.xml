@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black"
+
+    >
+<ImageView
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/logo"
+    android:padding="20dp"
+    android:background="@drawable/logo_bg"
+    android:layout_marginTop="100dp"
+    android:src="@drawable/ic_baseline_ac_unit_24"
+    android:layout_width="150dp"
+    android:layout_height="150dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_card"
+        android:padding="15dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/card_main_bg"
+        android:layout_below="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:transitionName="imageTransition"
+            android:id="@+id/profile_image"
+            android:src="@drawable/profile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"/>
+
+        <TextView
+            android:transitionName="nameTransition"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:id="@+id/profile_name"
+            android:layout_marginLeft="80dp"
+            android:text="User Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:transitionName="descTransition"
+            android:id="@+id/profile_desc"
+            android:layout_marginLeft="80dp"
+            android:layout_below="@+id/profile_name"
+            android:textSize="14dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit... "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:text="Click on the card view to open Profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/relative_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
